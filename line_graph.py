@@ -16,7 +16,7 @@ def line_graph(x_list, y_list, turtle_obj):
     helpers.build_graph(turtle_obj)
     helpers.write_title(turtle_obj, TITLE_TEXT)
     label_space = GRAPH_WIDTH / len(x_list)
-    helpers.write_x_labels(turtle_obj, x_list, True, label_space)
+    helpers.write_x_labels(turtle_obj, x_list, label_space)
     helpers.write_y_labels(turtle_obj, SPACE_BETWEEN_Y_LABELS, Y_MAX, 1)
 
     turtle_obj.goto(HOME_X, HOME_Y)

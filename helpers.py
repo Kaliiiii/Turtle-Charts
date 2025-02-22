@@ -10,15 +10,11 @@ def build_graph(turtle_obj):
     turtle_obj.goto(HOME_X+GRAPH_WIDTH, HOME_Y)
     turtle_obj.goto(HOME_X, HOME_Y)
 
-def write_x_labels(turtle_obj, x_list, zero_start, x_space):
-    if zero_start:
-        turtle_obj.goto(HOME_X, HOME_Y-20)
-        pos_diff = x_space
-        align = "left"
-    else:
-        turtle_obj.goto(HOME_X+x_space, HOME_Y-20)
-        pos_diff = x_space*2
-        align = "center"
+
+def write_x_labels(turtle_obj, x_list, x_space):
+    turtle_obj.goto(HOME_X, HOME_Y-20)
+    pos_diff = x_space
+    align = "left"
     for val in x_list:
         turtle_obj.write(val, align=align, font= LABEL_FONT)
         turtle_obj.goto(HOME_X+pos_diff, HOME_Y-20)

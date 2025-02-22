@@ -9,7 +9,7 @@ import tkinter as tk
 import turtle
 import line_graph, bar_graph, scatter_graph, whisker_graph
 from constants_globals import *
-import sample_data
+import fetch_sample_data
 
 
 def main():
@@ -55,11 +55,12 @@ def main():
     turtle4 = turtle.RawTurtle(canvas4)
 
     ##Defining sample data##
-    s_data, s_labels = sample_data.sales_per_month_data()
-    q_data = sample_data.quiz_data()
+    s_labels, s_data = fetch_sample_data.sales_per_month_data()
+
+   # q_data = fetch_sample_data.quiz_data()
 
     line_graph.line_graph(s_labels, s_data, turtle1)
-    scatter_graph.scatter_graph(q_data, turtle2)
+   # scatter_graph.scatter_graph(q_data, turtle2)
 
 
     window.mainloop()
